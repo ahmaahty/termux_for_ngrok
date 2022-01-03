@@ -1,23 +1,17 @@
 #!/bin/dash
-# Desenvolvido por Tchelo Noob
-atualizar='\033[1;32m'
-echo "$atualizar Atualizando repositório..."
+# Developed by AHMAD
+update='\033[1;32m'
+echo "$updating repository..."
 apt update && upgrade -y
 apt install -y wget
 clear
 k='\033[01;32m'
 echo
-echo "${k}████████╗ ██████╗██╗  ██╗███████╗██╗      ██████╗ ";
-echo "${k}╚══██╔══╝██╔════╝██║  ██║██╔════╝██║     ██╔═══██╗";
-echo "${k}   ██║   ██║     ███████║█████╗  ██║     ██║   ██║";
-echo "${k}   ██║   ██║     ██╔══██║██╔══╝  ██║     ██║   ██║";
-echo "${k}   ██║   ╚██████╗██║  ██║███████╗███████╗╚██████╔╝";
-echo "${k}   ╚═╝    ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝ ";
-echo "${k} /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/";
+echo "${k} BY_AHMAD ";
 echo
-echo "Deseja instalar o Ngrok? [Y/n]"
-read opcao
-case $opcao in
+echo "install Ngrok? [Y/n]"
+reading
+case $option in
 y)
 echo
 echo "Downloading Termux-ngrok..."
@@ -35,7 +29,7 @@ i*86)
 x86_64)
     architectureURL="amd64" ;;
 *)
-    echo "Arquitetura desconhecida"
+    echo "architecture unknown"
 esac
 
 wget "https://github.com/tchelospy/NgrokTest/blob/master/ngrok-stable-linux-${architectureURL}.zip?raw=true" -O ngrok.zip
@@ -44,21 +38,16 @@ cat ngrok > /data/data/com.termux/files/usr/bin/ngrok
 chmod 700 /data/data/com.termux/files/usr/bin/ngrok
 rm ngrok ngrok.zip
 clear
-echo "${k}███╗   ██╗ ██████╗ ██████╗  ██████╗ ██╗  ██╗";
-echo "${k}████╗  ██║██╔════╝ ██╔══██╗██╔═══██╗██║ ██╔╝";
-echo "${k}██╔██╗ ██║██║  ███╗██████╔╝██║   ██║█████╔╝ ";
-echo "${k}██║╚██╗██║██║   ██║██╔══██╗██║   ██║██╔═██╗ ";
-echo "${k}██║ ╚████║╚██████╔╝██║  ██║╚██████╔╝██║  ██╗";
-echo "${k}╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝";
+echo "${k} BY_AHMAD ";
 echo
-echo "Exemplo de comando (ngrok http 80\nOu ngrok para ajuda)"
+echo "Example command (ngrok http 80)"
 ;;
 
 n)
 clear
-echo "Ngrok não instalado :("
+echo "Ngrok not installed. "
 echo
-esac
+
 
 
 
